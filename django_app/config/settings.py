@@ -23,15 +23,17 @@ sys.path.append(str(BASE_DIR))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-+%@kjy5-1p=p*q664*ce*mei=tkr__seo5(g$twnnt%gq^hx$!'
-CSRF_TRUSTED_ORIGINS = [
-    "https://titanic-django-app-hrevbqh4bpgmhtcd.westeurope-01.azurewebsites.net"
-]
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://titanic-django-app-hrevbqh4bpgmhtcd.westeurope-01.azurewebsites.net"
+]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
